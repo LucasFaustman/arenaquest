@@ -1,0 +1,65 @@
+@page "{id:int}"
+@model ArenaQuest.Pages.Gamelogs.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Gamelog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Gamelog.Id" />
+            <div class="form-group">
+                <label asp-for="Gamelog.Team1" class="control-label"></label>
+                <input asp-for="Gamelog.Team1" class="form-control" />
+                <span asp-validation-for="Gamelog.Team1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.Team2" class="control-label"></label>
+                <input asp-for="Gamelog.Team2" class="form-control" />
+                <span asp-validation-for="Gamelog.Team2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.Date" class="control-label"></label>
+                <input asp-for="Gamelog.Date" class="form-control" />
+                <span asp-validation-for="Gamelog.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.League" class="control-label"></label>
+                <select asp-for="Gamelog.League" class="form-control"></select>
+                <span asp-validation-for="Gamelog.League" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.Arena" class="control-label"></label>
+                <input asp-for="Gamelog.Arena" class="form-control" />
+                <span asp-validation-for="Gamelog.Arena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.Comments" class="control-label"></label>
+                <input asp-for="Gamelog.Comments" class="form-control" />
+                <span asp-validation-for="Gamelog.Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gamelog.Rating" class="control-label"></label>
+                <input asp-for="Gamelog.Rating" class="form-control" />
+                <span asp-validation-for="Gamelog.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

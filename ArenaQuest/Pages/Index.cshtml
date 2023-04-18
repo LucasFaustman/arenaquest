@@ -1,11 +1,32 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "ArenaQuest - Track your sports games and arenas";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to ArenaQuest</h1>
+    <p class="lead">Track the sports games and arenas you've attended</p>
+    <hr class="my-4">
+    <img src="~/images/Basketball-Illustration.jpg" alt="basketball hero image">
+
+    <p> <a class="btn btn-primary btn-lg" href="/Gamelogs/Create" role="button">Create a new game entry now</a></p>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Features</h2>
+            <ul>
+                <li>Track your sports games and arenas</li>
+                <li>View your game logs and filter by team, league, and date</li>
+                <li>Add comments and ratings to your game logs</li>
+                <li>Edit or delete your game log entries</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h2>About ArenaQuest</h2>
+            <p>ArenaQuest is a web app built with ASP.NET Core that allows you to track the sports games and arenas you've attended. It's a simple way to keep a record of your sports experiences and memories.</p>
+        </div>
+    </div>
+</div>
